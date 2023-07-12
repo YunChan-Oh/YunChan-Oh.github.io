@@ -1,32 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="main_style.css">
-        <script src="main_script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <h1><a href="main.html">YUNCHAN</a></h1>
-                <div class="nav">
-                    <ul>
-                        <li><a href="sub_screen1.html">HOME</a></li>
-                        <li><a href="#">BEDROOM</a></li>
-                        <li><a href="#">DINING</a></li>
-                        <li><a href="#">KITCHEN</a></li>
-                        <li><a href="#">BACKYARD</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="hero">
-                <h2>MY INTRODUCTION </h2>
-                <p>Subscribe Easy Youtube Channel to watch more videos,<br>press t he bell icon to get latest updates.</p>
-                <button>WATCH MORE</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: abster;
+            src: url("font/abster-webfont.woff") format("woff");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .header {
+            width: 20%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .header h1 a {
+            text-decoration: none;
+            color: white;
+            font-family: abster;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .nav ul li {
+            margin-bottom: 10px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav ul li a:hover {
+            color: #1fdfdf;
+        }
+
+        .content {
+            width: 80%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/code.jpg");
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .content span {
+            color: white;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                <a href="landing.html">YUNCHAN</a>
+            </h1>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="sub_screen1.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">BEDROOM</a>
+                    </li>
+                    <li>
+                        <a href="#">DINING</a>
+                    </li>
+                    <li>
+                        <a href="#">KITCHEN</a>
+                    </li>
+                    <li>
+                        <a href="#">BACKYARD</a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="content">
+            <span id="myElement"></span>
+        </div>
     </div>
-    </body>
+
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+        new TypeIt("#myElement", {
+            strings: "<b>BACKEND-DEVELOPER</b><br><br>Hello, I am Yunchan Oh<br>who dreams of becoming a backend developer.",
+            afterComplete: function (instance) {
+                instance.destroy();
+            }
+        }).go();
+    </script>
+</body>
 </html>

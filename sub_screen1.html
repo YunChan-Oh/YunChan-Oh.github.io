@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="sub_screen1_style.css">
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <h1>
-                    <a href="#">YUNCHAN</a>
+                    <a href="landing.html">YUNCHAN</a>
                 </h1>
                 <div class="nav">
                     <ul>
@@ -32,6 +33,12 @@
                     </ul>
                 </div>
             </div>
+            <span style="color: white; font-size: 60px" id="myElement"></span>
+            <!-- The script itself, loaded AFTER your root element. -->
+            <script src="<https://unpkg.com/typeit@8.7.1/dist/index.umd.js>"></script>
+            <script>
+                new TypeIt("#myElement", {strings: "Hello, I am Yunchan Oh <br>who dreams of becoming a backend developer.", afterComplete: function(instance){instance.destroy();}}).go();
+            </script>
         </div>
     </div>
 </body>

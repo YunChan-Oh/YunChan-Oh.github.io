@@ -2,48 +2,63 @@
   font-family: abster;
   src: url(font/abster-webfont.woff) format("woff");
 }
+html {
+  overflow: hidden;
+}
+
+html,
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
-
-.container {
-  width: 100%;
-  height: 100vh;
+.m {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(images/planet.jpg);
 }
+.content {
+  width: 100%;
+  height: 100vh;
+}
 
-.container .header {
+.header {
   width: 80%;
   height: 80px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0%;
 }
 
-.container .header h1 a {
+.header h1 a {
   text-decoration: none;
   color: white;
   font-family: abster;
 }
 
-.container .nav ul li {
+.nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-.container .nav ul li a {
+.nav ul li a {
   text-decoration: none;
   color: white;
 }
 
-.container .nav ul li a:hover {
+.nav ul li a:hover {
   color: #1fdfdf;
 }
 
-.container .hero {
+.content .hero {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -53,16 +68,16 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container .hero h2 {
+.content .hero h2 {
   font-size: 60px;
   margin-bottom: 20px;
 }
 
-.container .hero p {
+.content .hero p {
   font-size: 22px;
 }
 
-.container .hero button {
+.content .hero button {
   background: none;
   border: 2px solid darkseagreen;
   color: white;
@@ -73,6 +88,6 @@
   cursor: pointer;
 }
 
-.container .hero button:hover {
+.content .hero button:hover {
   background-color: darkslategray;
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="landing.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".hero button").on("click", function () {
+                $(".m").fadeOut(500, function () {
+                    window.location.href = "main.html";
+                });
+            });
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: abster;
+            src: url("font/abster-webfont.woff") format("woff");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .m {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/planet.jpg");
+            transition: opacity 0.5s ease;
+        }
+        .content {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .header {
+            width: 80%;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .header h1 a {
+            text-decoration: none;
+            color: white;
+            font-family: abster;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav ul li a:hover {
+            color: #1fdfdf;
+        }
+
+        .content .hero {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .content .hero h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .content .hero p {
+            font-size: 22px;
+        }
+
+        .content .hero button {
+            background: none;
+            border: 2px solid darkseagreen;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .content .hero button:hover {
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+<body>
+    <div class="m">
+        <div class="header">
+            <h1>
+                <a href="landing.html">YUNCHAN</a>
+            </h1>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="sub_screen1.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">BEDROOM</a>
+                    </li>
+                    <li>
+                        <a href="#">DINING</a>
+                    </li>
+                    <li>
+                        <a href="#">KITCHEN</a>
+                    </li>
+                    <li>
+                        <a href="#">BACKYARD</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="hero">
+                <h2>MY INTRODUCTION</h2>
+                <p>Subscribe Easy Youtube Channel to watch more videos,<br>press the bell icon to get the latest updates.</p>
+                <button>DREAMS</button>
+            </div>
+        </div>
+        <div class="content">
+            <span style="color: white; font-size: 60px" id="myElement"></span>
+            <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+            <script>
+                new TypeIt("#myElement", {
+                    strings: "Hello, I am Yunchan Oh <br>who dreams of becoming a backend developer.",
+                    afterComplete: function (instance) {
+                        instance.destroy();
+                    }
+                }).go();
+            </script>
+        </div>
+        <div class="content">
+            <span style="color: white; font-size: 60px" id="myElement"></span>
+            <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+            <script>
+                new TypeIt("#myElement", {
+                    strings: "Hello, I am Yunchan Oh <br>who dreams of becoming a backend developer.",
+                    afterComplete: function (instance) {
+                        instance.destroy();
+                    }
+                }).go();
+            </script>
+        </div>
+    </div>
+</body>
+</html>
