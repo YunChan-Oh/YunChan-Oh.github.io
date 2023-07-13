@@ -7,12 +7,31 @@
         <link rel="stylesheet" href="sub_screen1_style.css">
         <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
         <style>
+            .mainbox {
+                height: 90vh;
+                width: 100vw;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+            .square {
+                height: 825px;
+                width: 900px;
+                align-items: center;
+                justify-content: center;
+            }
             img {
                 width: 500px;
                 height: 300px;
                 position: relative;
                 justify-content: center;
                 align-items: center;
+            }
+            #moving-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         </style>
     </head>
@@ -42,12 +61,42 @@
                     </ul>
                 </div>
             </div>
-            <img src="images/computer.jpg" alt="computer">
-            <!-- <span style="color: white; font-size: 60px" id="myElement"></span> <script
-            src="<https://unpkg.com/typeit@8.7.1/dist/index.umd.js>"></script> -->
-            <!-- <script> new TypeIt("#myElement", { strings: "Hello, I am Yunchan Oh
-            <br>who dreams of becoming a backend developer.", afterComplete: function
-            (instance) { instance.destroy(); } }).go(); </script> -->
+            <div class="mainbox">
+                <img class="square" src="images/img.png" alt="">
+            </div>
+            <div id="moving-image">
+                <img src="./images/문.png" alt="Moving Image">
+            </div>
         </div>
-    </body>
+        <script>
+            var x = 0;
+            var y = 0;
+
+            // 이미지의 움직임을 처리하는 함수
+            function moveImage() {
+                var image = document.getElementById('moving-image');
+                var t = Date.now() / 1000; // 초 단위 시간
+
+                // x와 y 좌표 계산
+                x = Math.cos(t) * 40; // 임의의 값을 사용한 예시
+                y = Math.sin(t) * 45; // 임의의 값을 사용한 예시
+
+                // 이미지 위치 업데이트
+                image.style.left = 50 + x + "%";
+                image.style.top = 50 + y + "%";
+
+                // moveImage 함수를 60fps로 호출하여 부드러운 움직임을 생성
+                requestAnimationFrame(moveImage);
+            }
+
+            // moveImage 함수 호출
+            moveImage();
+        </script>
+        <!-- <span style="color: white; font-size: 60px" id="myElement"></span> <script
+        src="<https://unpkg.com/typeit@8.7.1/dist/index.umd.js>"></script> -->
+        <!-- <script> new TypeIt("#myElement", { strings: "Hello, I am Yunchan Oh
+        <br>who dreams of becoming a backend developer.", afterComplete: function
+        (instance) { instance.destroy(); } }).go(); </script> -->
+    </div>
+</body>
 </html>
