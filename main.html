@@ -62,7 +62,7 @@
         .content {
             width: 80%;
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/code.jpg");
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/code1.jpg");
             background-size: cover;
             color: white;
             display: flex;
@@ -84,19 +84,19 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <a href="sub_screen1.html">HOME</a>
+                        <a href="sub_screen1.html">INFO</a>
                     </li>
                     <li>
-                        <a href="#">BEDROOM</a>
+                        <a href="#">SKILL</a>
                     </li>
                     <li>
-                        <a href="#">DINING</a>
+                        <a href="#">TMI</a>
                     </li>
                     <li>
-                        <a href="#">KITCHEN</a>
+                        <a href="https://github.com/YunChan-Oh">GITHUB</a>
                     </li>
                     <li>
-                        <a href="#">BACKYARD</a>
+                        <a href="https://www.instagram.com/o_y_c_12345/">INSTAGRAM</a>
                     </li>
                 </ul>
             </div>
@@ -109,11 +109,13 @@
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         new TypeIt("#myElement", {
-            strings: "<b>BACKEND-DEVELOPER</b><br><br>Hello, I am Yunchan Oh<br>who dreams of becoming a backend developer.",
+            strings: '<span style="color:yellow;">★</span><b style="color:yellow;">BACKEND-DEVELOPER</b><span style="color:yellow;">★</span><br><br>Hello!, I am Yunchan Oh<br>who dreams of becoming a backend developer.',
+            speed: 50,
             afterComplete: function (instance) {
                 instance.destroy();
             }
         }).go();
     </script>
+    
 </body>
 </html>
