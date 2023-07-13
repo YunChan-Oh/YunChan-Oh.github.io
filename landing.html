@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="landing.css">
+    <link rel="shortcut icon" href="images/sunset">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -42,12 +43,24 @@
             align-items: center;
             position: sticky;
             top: 0;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        .header h1 {
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 0.5s forwards;
         }
 
         .header h1 a {
             text-decoration: none;
             color: white;
             font-family: abster;
+        }
+
+        .nav {
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 0.5s forwards;
         }
 
         .nav ul li {
@@ -72,15 +85,21 @@
             color: white;
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 0.5s forwards;
         }
 
         .content .hero h2 {
             font-size: 60px;
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 1s forwards;
         }
 
         .content .hero p {
             font-size: 22px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 1.5s forwards;
         }
 
         .content .hero button {
@@ -92,10 +111,21 @@
             margin-top: 30px;
             outline: none;
             cursor: pointer;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out 2s forwards;
         }
 
         .content .hero button:hover {
             background-color: darkslategray;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -128,7 +158,7 @@
         <div class="content">
             <div class="hero">
                 <h2>MY INTRODUCTION</h2>
-                <p>Subscribe Easy Youtube Channel to watch more videos,<br>press the bell icon to get the latest updates.</p>
+                <p>This page deals with my self-introduction<br> now I will start introducing myself</p>
                 <button>DREAM</button>
             </div>
         </div>
